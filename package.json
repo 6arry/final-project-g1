@@ -39,10 +39,7 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "devDependencies": {
-    "babel-eslint": "^9.0.0",
-    "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.1",
-    "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^4.3.0",
     "eslint-config-wesbos": "0.0.19",
     "eslint-plugin-html": "^5.0.5",
