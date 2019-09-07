@@ -36,7 +36,7 @@ class Djnavbar extends React.Component {
                   <NavLink href='https://github.com/g-xander/final-project-g1'>
                     Github Repo
                   </NavLink>
-                  <NavLink href='https://github.com/g-xander'>Logout</NavLink>
+                  <NavLink href='/'>Logout</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>
