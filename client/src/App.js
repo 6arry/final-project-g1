@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 import Navigation from './components/Navigation';
-import Home from './components/Home';
-import Host from './components/Host';
-import Join from './components/Join';
+import Home from './pages/Home';
+import Host from './pages/Host';
+import Join from './pages/Join';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
