@@ -1,27 +1,49 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import './NavCode';
+import { Menu, Segment } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
-function Navigation() {
-  return (
-    <div className='ui inverted segment'>
-      <div className='ui inverted secondary menu'>
-        <Link to='/'>
-          <a className='active item'>Home</a>
-        </Link>
-        <Link to='/host'>
-          <a className='item'>Host</a>
-        </Link>
-        <Link to='/join'>
-          <a className='item'>Join</a>
-        </Link>
-        <Link to='/logout'>
-          <a className='item'>Logout</a>
-        </Link>
-      </div>
-    </div>
-  );
-}
+export default class Navigation extends React.Component {
+  state = { activeItem: 'home' };
 
-export default Navigation;
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
+
+  render() {
+    const { activeItem } = this.state;
+
+    return (
+      <Segment inverted>
+        <Menu inverted pointing secondary>
+          <Link to='/'>
+            <Menu.Item
+              name='home'
+              active={activeItem === 'home'}
+              onClick={this.handleItemClick}
+            />
+          </Link>
+          <Link to='/host'>
+            <Menu.Item
+              name='host'
+              active={activeItem === 'host'}
+              onClick={this.handleItemClick}
+            />
+          </Link>
+          <Link to='/join'>
+            <Menu.Item
+              name='join'
+              active={activeItem === 'join'}
+              onClick={this.handleItemClick}
+            />
+          </Link>
+          <Link to='/logout'>
+            <Menu.Item
+              name='logout'
+              active={activeItem === 'logout'}
+              onClick={this.handleItemClick}
+            />
+          </Link>
+        </Menu>
+      </Segment>
+    );
+  }
+}
