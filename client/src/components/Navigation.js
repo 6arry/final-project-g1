@@ -1,26 +1,26 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import '../App.css';
+import './NavCode';
 import { Link } from 'react-router-dom';
 
 function Navigation() {
   return (
-    <nav>
-      <h3>Logo</h3>
-      <ul className='nav-links'>
+    <div className='ui inverted segment'>
+      <div className='ui inverted secondary menu'>
         <Link to='/'>
-          <li>Home</li>
+          <a className='active item'>Home</a>
         </Link>
         <Link to='/host'>
-          <li>Host</li>
+          <a className='item'>Host</a>
         </Link>
         <Link to='/join'>
-          <li>Join</li>
+          <a className='item'>Join</a>
         </Link>
         <Link to='/logout'>
-          <li>Logout</li>
+          <a className='item'>Logout</a>
         </Link>
-      </ul>
-    </nav>
+      </div>
+    </div>
   );
 }
 
