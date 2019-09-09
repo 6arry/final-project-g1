@@ -4,15 +4,20 @@ import Navigation from './components/Navigation';
 import Home from './components/Home';
 import Host from './components/Host';
 import Join from './components/Join';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className='App'>
-      <Navigation />
-      <Home />
-      <Host />
-      <Join />
-    </div>
+    <Router>
+      <div className='App'>
+        <Navigation />
+        <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/host' component={Host} />
+          <Route path='/join' component={Join} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
