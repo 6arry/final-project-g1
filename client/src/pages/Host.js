@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css';
+import SearchBar from '../components/SearchBar';
 
 function Host() {
   return (
