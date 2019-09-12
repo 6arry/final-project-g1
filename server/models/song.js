@@ -7,7 +7,7 @@ const song = new Schema(
         artist: { type: [String], required: true },
         URL: { type: String, required: true },
         playlist: { type: mongoose.Schema.Types.ObjectId,
-            ref:'playlist'},
+            ref:'playlists'},
     },
     { timestamps: true },
 )

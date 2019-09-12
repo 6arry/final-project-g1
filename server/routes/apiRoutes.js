@@ -24,13 +24,9 @@ module.exports = function(app) {
 
 //fetching playlist from DB
   app.get("/playlist/:id", function(req, res) {
-/*
-    Playlist.find({ _id : req.params.id }).exec(function(error, results) {
-        res.send(results);
-    });
-    */
-   Song.find({ playlist : req.params.id }).populate("playlist").exec(function(error, results) {
-        res.end(results);
+
+    Song.find({ playlist : req.params.id }).populate("playlists").exec(function(error, results) {
+        res.send((error) ? error : results);
    });
   });
 
