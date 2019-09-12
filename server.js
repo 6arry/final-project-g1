@@ -1,17 +1,21 @@
 // eslint-disable-next-line no-unused-vars
 const express = require('express');
 const mongoose = require('mongoose');
+const app = express();
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 
 const PORT = process.env.PORT || 3000;
 
 const routes = require('./routes/api/items');
+app.use(routes);
 
-const app = express();
+
 
 const db = require('./config/keys').mongoURI;
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+
 
 
 mongoose
