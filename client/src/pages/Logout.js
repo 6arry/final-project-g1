@@ -4,7 +4,7 @@ import React from 'react';
 function Logout() {
   return (
     <div>
-      <h1 class="text">This is the Logout page!</h1>
+      <h1 className="things">This is the Logout page!</h1>
     </div>
   );
 }

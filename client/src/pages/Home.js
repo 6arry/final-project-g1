@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBar from '../components/SearchBar';
-import './Home.css';
 import './App.css';
+import './Home.css';
 import {Animated} from 'react-animated-css';
 
 function Home() {
@@ -10,7 +10,8 @@ function Home() {
     <div>
   <Animated 
             animationIn="lightSpeedIn" 
-            animationOut="zoomOutDown" 
+            animationOut="zoomOutDowçn" 
+            animationInDelay={0}
             animationInDuration={1400} 
             animationOutDuration={1400} 
             isVisible={true}> 
