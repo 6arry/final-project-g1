@@ -1,5 +1,8 @@
 import React from 'react';
-import '../App.css';
+// import './App.css';
+// import {Animated} from "react-animated-css";
+
+
 import SearchBar from '../components/SearchBar';
 
 function Join() {
@@ -9,6 +12,7 @@ function Join() {
       <SearchBar />
     </div>
   );
+     
 }
 
 export default Join;
