@@ -27,7 +27,7 @@ function Home() {
                     animationOutDuration={1400} 
                     isVisible={true}> 
                   <div>    
-                    <h1 className="hit-the-floor">This is the Home page!</h1>
+                    <h1 className="hit-the-floor">DJcollective</h1>
                     <SearchBar />
                   </div>
   
