@@ -5,8 +5,9 @@ import SearchBar from '../components/SearchBar';
 import {Animated} from 'react-animated-css';
 
 function Host() {
+  var element = document.getElementById("body");
+  element.className="host";
   return (
-
     <div>
         <Animated 
             animationIn="zoomInRight" 

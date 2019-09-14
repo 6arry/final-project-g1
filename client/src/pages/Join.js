@@ -8,6 +8,8 @@ import {Animated} from 'react-animated-css';
 ;
 
 function Join() {
+  var element = document.getElementById("body");
+  element.className="join";
   return (
     <div>
     <Animated 
