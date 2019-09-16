@@ -11,8 +11,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static(__dirname + '/public'));
 
-
-
 // Route
 require("./routes/apiRoutes")(app);
 
