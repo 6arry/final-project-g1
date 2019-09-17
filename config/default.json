@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://AndrewSRea:SonicYouth7*@andrewsrea-sembm.mongodb.net/mern-shopping",
+    "jwtSecret": "sl_myJwtSecret"
+}
