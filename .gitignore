@@ -79,7 +79,6 @@ typings/
 .env.test.local
 .env.production.local
 package-lock.json
-/config
 
 npm-debug.log*
 yarn-debug.log*
