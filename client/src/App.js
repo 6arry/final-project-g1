@@ -6,14 +6,14 @@ import { Container } from 'reactstrap';
 
 import { Provider } from 'react-redux';
 import store from './store';
-import { loadUser } from './actions/authActions';
+import { loadUser } from './actions/authActions'; // ADDED FOR LOGIN
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 class App extends Component {
 
-  componentDidMount() {
+  componentDidMount() {         // "componentDidMount" block of code ADDED FOR LOGIN
     store.dispatch(loadUser());
   }
   

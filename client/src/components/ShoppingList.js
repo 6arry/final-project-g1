@@ -9,7 +9,7 @@ class ShoppingList extends Component {
     static propTypes = {
         getItems: PropTypes.func.isRequired,
         item: PropTypes.object.isRequired,
-        isAuthenticated: ProprTypes.bool
+        isAuthenticated: PropTypes.bool
     };
 
     componentDidMount() {

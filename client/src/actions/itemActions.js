@@ -1,8 +1,7 @@
 import axios from 'axios';
 import { GET_ITEMS, ADD_ITEM, DELETE_ITEM, ITEMS_LOADING }from './types';
-import { tokenConfig } from './authActions';
+import { tokenConfig } from './authActions';     // "tokenConfig" and "returnErrors" ADDED FOR LOGIN
 import { returnErrors } from './errorActions';
-import { getHeapStatistics } from 'v8';
 
 export const getItems = () => dispatch => {
     dispatch(setItemsLoading());
@@ -20,7 +19,7 @@ export const getItems = () => dispatch => {
 
 export const addItem = item => (dispatch, getState) => {
     axios
-        .post('/api/items', item, tokenConfig(getState))
+        .post('/api/items', item, tokenConfig(getState))          // "tokenConfig" ADDED FOR LOGIN
         .then(res => 
             dispatch({
                 type: ADD_ITEM,
@@ -33,7 +32,7 @@ export const addItem = item => (dispatch, getState) => {
 
 export const deleteItem = id => (dispatch, getState) => {
     axios
-        .delete(`/api/items/${id}`, tokenConfig(getState)).then(res =>
+        .delete(`/api/items/${id}`, tokenConfig(getState)).then(res =>          // "tokenConfig" ADDED FOR LOGIN
             dispatch({
                 type: DELETE_ITEM,
                 payload: id

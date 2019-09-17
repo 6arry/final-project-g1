@@ -1,3 +1,5 @@
+// ENTIRE FILE ADDED FOR LOGIN
+
 import { GET_ERRORS, CLEAR_ERRORS } from './types';
 
 export const returnErrors = (msg, status, id = null) => {

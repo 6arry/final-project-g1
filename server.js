@@ -1,17 +1,15 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
-const config = require('config');
-
-const items = require('./routes/api/items');
+const config = require('config'); // ADDED FOR LOGIN
 
 const app = express();
 
 app.use(express.json());
 
-const db = config.get('mongoURI');
+const db = config.get('mongoURI'); // ADDED FOR LOGIN
 
-mongoose
+mongoose                                              // MONGOOSE CONNECT ALTERED FOR LOGIN
     .connect(db, {
         useNewUrlParser: true,
         useCreateIndex: true
@@ -20,8 +18,8 @@ mongoose
     .catch(err => console.log(err));
 
 app.use('/api/items', require('./routes/api/items'));
-app.use('/api/users', require('./routes/api/users'));
-app.use('/api/auth', require('./routes/api/auth'));
+app.use('/api/users', require('./routes/api/users')); // ADDED FOR LOGIN
+app.use('/api/auth', require('./routes/api/auth')); // ADDED FOR LOGIN
 
 
 if(process.env.NODE_ENV === 'production') {

@@ -9,9 +9,9 @@ import {
     NavLink,
     Container
 } from 'reactstrap';
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'; // "connect" and "PropTypes" also ADDED FOR LOGIN
 import PropTypes from 'prop-types';
-import RegisterModal from './auth/RegisterModal';
+import RegisterModal from './auth/RegisterModal'; // "Register Modal", "LoginModal", and "Logout" ADDED HERE FOR LOGIN
 import LoginModal from './auth/LoginModal';
 import Logout from './auth/Logout';
 
@@ -31,9 +31,9 @@ class AppNavbar extends Component {
     };
 
     render() {
-        const { isAuthenticated, user } = this.props.auth;
+        const { isAuthenticated, user } = this.props.auth;                       // "isAuthenticated" ALSO ADDED FOR LOGIN
 
-        const authLinks = (
+        const authLinks = (                                                     // "authLinks" and "guestLinks" ADDED FOR LOGIN
             <Fragment>
                 <NavItem>
                     <span className="navbar-text mr-3" >
