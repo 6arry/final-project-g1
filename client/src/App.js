@@ -1,28 +1,29 @@
-import React from 'react';
-// import './pages/App.css';
-// import './pages/Home.css';
-// import './pages/Host.css';
-import Navigation from './components/Navigation';
-import Home from './pages/Home';
-import Host from './pages/Host';
-import Join from './pages/Join';
-import Logout from './pages/Logout';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React, { Component } from 'react';
+import AppNavbar from './components/AppNavbar';
+import ShoppingList from './components/ShoppingList';
+import ItemModal from './components/ItemModal';
+import { Container } from 'reactstrap';
 
-function App() {
-  return (
-    <Router>
-      <div className='App'>
-        <Navigation />
-        <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/host' component={Host} />
-          <Route path='/join' component={Join} />
-          <Route path='/logout' component={Logout} />
-        </Switch>
-      </div>
-    </Router>
-  );
+import { Provider } from 'react-redux';
+import store from './store';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+
+class App extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <div className="App">
+          <AppNavbar />
+          <Container>
+            <ItemModal />
+            <ShoppingList />
+          </Container>
+        </div>
+      </Provider>
+    );
+  }
 }
 
 export default App;
