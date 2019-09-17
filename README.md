@@ -1,35 +1,32 @@
 # Notes on my login files
 
-This is what I've added/deleted from files/folders so far, pertaining to what's needed for login authentication
+Login Authentication
 
-There are files that are in this login authentication which were created to make a Shopping List and should be ignored
+Npm installed express, body-parser, mongoose, concurrently, bcryptjs, jsonwebtoken, config
+(npm installed as devDependency (“-D”): nodemon)
 
+Npm installed on client-side (“cd client”): bootstrap, reactstrap, uuid, react-transition-group, redux, react-redux, redux-thunk, axios
 
-Npm installed bcryptjs, jsonwebtoken, config
+NEED TO CHANGE KEYS IN config/default.json TO FIT DATABASE
 
-New file to models folder: User.js
-
-New file to routes/api folder: users.js; auth.js
-
-Created new folder middleware with file: auth.js
-
-Added to server.js: bodyParser deleted
-		       Line 9: app.use(express.json()); <added>
-		      Line 12: changed to const db = config.get(‘mongoURI’);
-
-line 15: .connect(db, {
-				useNewUrlParser: true,
-				useCreateIndex: true
-
-       line 19: app.use('/api/items', require('./routes/api/items'));
-                 line 20: app.use('/api/users', require('./routes/api/users'));
-			    app.use(‘/api/auth’, require(‘./routes/api/auth’));
-
-Added to config folder: default.json
-Deleted from config folder: keys.js
-
-Added to routes/api/items.js: const auth = require(‘../../middleware/auth’);
-
-**Reference: jwt.io***
+Files added for login:
+	models/User.js
+	routes/api/auth.js
+	routes/api/users.js
+	config/default.json <NEED TO HIDE WITH .gitignore AFTER KEYS ARE ALTERED>
+	middleware/auth.js
+	client/src/reducers/authReducer.js
+	client/src/reducers/errorReducer.js
+	client/src/actions/authActions.js
+	client/src/actions/errorActions.js
+	client/src/components/auth/LoginModal.js
+	client/src/components/auth/Logout.js
+	client/src/components/auth/RegisterModal.js
 
 
+Lines of code added to existing files will have comments: “// ADDED FOR LOGIN”
+
+<LOTS OF LINES OF CODE IN client/src/actions/types.js >
+
+
+Info for JSONWebToken can be found at: jwt.io
