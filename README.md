@@ -5,8 +5,6 @@ This is what I've added/deleted from files/folders so far, pertaining to what's 
 There are files that are in this login authentication which were created to make a Shopping List and should be ignored
 
 
-Added to mern-shopping-list for Login Authentication
-
 Npm installed bcryptjs, jsonwebtoken, config
 
 New file to models folder: User.js
