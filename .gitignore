@@ -73,6 +73,7 @@ typings/
 /build
 
 # misc
+/config
 .DS_Store
 .env.local
 .env.development.local

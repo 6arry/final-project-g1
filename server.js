@@ -7,6 +7,7 @@ const app = express();
 
 app.use(express.json());
 
+console.log(config.get('mongoURI'));
 const db = config.get('mongoURI'); // ADDED FOR LOGIN
 
 mongoose                                              // MONGOOSE CONNECT ALTERED FOR LOGIN
@@ -30,6 +31,6 @@ if(process.env.NODE_ENV === 'production') {
     });
 }
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3001;
 
 app.listen(port, () => console.log(`Server started on port ${port}`));
