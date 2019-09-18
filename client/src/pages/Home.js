@@ -1,8 +1,8 @@
 import React from 'react';
-import SearchBar from '../components/SearchBar';
 import './App.css';
 import './Home.css';
 import {Animated} from 'react-animated-css';
+
 
 function Home() {
   // var element = document.getElementById("body");
@@ -10,8 +10,8 @@ function Home() {
   return (
     <div>
       <Animated
-        animationIn="slideInLeft" 
-        animationOut="zoomOutDowçn" 
+        animationIn="rotateInUpLeft" 
+        animationOut="zoomOutDown" 
         animationInDelay={0}
         animationInDuration={1400} 
         animationOutDuration={1400} 
@@ -21,17 +21,14 @@ function Home() {
           <div>
             <Animated 
                     animationIn="lightSpeedIn" 
-                    animationOut="zoomOutDowçn" 
-                    animationInDelay={1000}
-                    animationInDuration={1400} 
+                    animationOut="zoomOutDown" 
+                    animationInDelay={50}
+                    animationInDuration={2200} 
                     animationOutDuration={1400} 
                     isVisible={true}> 
-                  <div>    
+                  <div>  
                     <h1 className="hit-the-floor">DJcollective</h1>
-                    <SearchBar />
                   </div>
-  
-    
       
               </Animated>
             </div>
@@ -44,3 +41,5 @@ function Home() {
 }
 
 export default Home;
+  
+    

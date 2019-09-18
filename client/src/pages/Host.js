@@ -5,22 +5,49 @@ import SearchBar from '../components/SearchBar';
 import {Animated} from 'react-animated-css';
 
 function Host() {
-  // var element = document.getElementById("body");
-  // element.className="host";
+
   return (
     <div>
-        <Animated 
-            animationIn="zoomInRight" 
-            animationOut="zoomOutDowçn" 
-            animationInDuration={1400} 
-            animationOutDuration={1400} 
-            isVisible={true}> 
-      <div className="host">      
-      <h1 className="things">This is the Host page!</h1>
-      <SearchBar />
+        <Animated
+          animationIn="rotateInUpRight"  
+          animationOut="zoomOutDown" 
+          animationInDelay={0}
+          animationInDuration={1400} 
+          animationOutDuration={1400} 
+          isVisible={true}> 
+
+          <div className="host">
+            <div>
+              <Animated 
+                  animationIn="lightSpeedIn" 
+                  animationOut="zoomOutDown" 
+                  aninationInDelay={50}
+                  animationInDuration={1950} 
+                  animationOutDuration={1400} 
+                  isVisible={true}> 
+                <div>      
+                  <h1 className="hit-the-floor">Let the Party Begin!</h1>
+                  <audio src="./music/Arpy.mp3" controls autoplay></audio>
+                  <div>
+                  <Animated
+                      animationIn="rotateInUpLeft"  
+                      animationOut="zoomOutDown" 
+                      animationInDelay={1100}
+                      animationInDuration={1400} 
+                      animationOutDuration={1400} 
+                      isVisible={true}> 
+
+
+                              <SearchBar />
+
+                    </Animated>
+                  </div>
+                </div>
+              </Animated>
+            </div>
+           </div> 
+         </Animated> 
       </div>
-      </Animated>
-    </div>
     
   );
 }

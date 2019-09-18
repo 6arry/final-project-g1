@@ -1,7 +1,4 @@
 import React from 'react';
-// import './pages/App.css';
-// import './pages/Home.css';
-// import './pages/Host.css';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import Host from './pages/Host';
