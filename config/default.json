@@ -1,4 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://AndrewSRea:SonicYouth7*@andrewsrea-sembm.mongodb.net/mern-shopping",
+    "mongoURI": "mongodb://heroku_jfs6hmdc:#ertYhj9@ds217438.mlab.com:17438/heroku_sz4drf5d",
     "jwtSecret": "sl_myJwtSecret"
 }
