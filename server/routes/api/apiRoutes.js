@@ -1,5 +1,5 @@
 const router = require("express").Router();
-var db = require("../../models");
+var db = require("../../db");
 
 var Playlist = require("../../models/playlist");
 var Song = require("../../models/song");

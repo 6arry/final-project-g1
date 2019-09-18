@@ -1,6 +1,6 @@
 //Server entry point 
 var express = require("express");
-var db = require("./models");
+// var db = require("./db");
 var app = express();
 const routes = require("./routes");
 
