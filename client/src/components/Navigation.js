@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, Segment } from 'semantic-ui-react';
+import { Menu, Segment, Confirm } from 'semantic-ui-react';
 
 
-export default class Navigation extends React.Component {
+export default class Navigation extends Component {     //<--when you import 'Component' above, you don't need to write 'React.Component' here
   state = { activeItem: 'home' };
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
