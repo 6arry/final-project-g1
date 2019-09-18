@@ -1,52 +1,56 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, Segment } from 'semantic-ui-react';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+ Container 
+} from 'reactstrap';
 
+class Navigation extends React.Component {
+  state = {
+    isOpen: false
+  }
 
-export default class Navigation extends React.Component {
-  state = { activeItem: 'home' };
-
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
+  toggle = () => {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
 
   render() {
-    const { activeItem } = this.state;
-
     return (
-      <Segment inverted>
-        <Menu inverted pointing secondary>
-          <Menu.Item
-            as={Link}
-            to='/'
-            name='home'
-            active={activeItem === 'home'}
-            onClick={this.handleItemClick}
-          />
-          <Menu.Item
-            as={Link}
-            to='/host'
-            name='host'
-            active={activeItem === 'host'}
-            onClick={this.handleItemClick}
-          />
-          <Menu.Item
-            as={Link}
-            to='/join'
-            name='join'
-            active={activeItem === 'join'}
-            onClick={this.handleItemClick}
-          />
-          <Menu.Item
-            as={Link}
-            to='/logout'
-            name='logout'
-            active={activeItem === 'logout'}
-            onClick={this.handleItemClick}
-          />
-        </Menu>
-      </Segment>
-    );
+      <div>
+        <Navbar color="dark" dark expand="md" className="mb-5">
+          <Container>
+            <NavbarBrand href="/">DJ Collective</NavbarBrand>
+            <NavbarToggler onClick={this.toggle} />
+            <Collapse isOpen={this.state.isOpen} navbar>
+              <Nav className="ml-auto" navbar>
+                <NavItem>
+                  <NavLink href="/">Dashboard</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/host">Host</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/join">Join</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/logout">Logout</NavLink>
+                </NavItem>
+              </Nav>
+            </Collapse>
+          </Container>
+        </Navbar>
+      </div>
+    )
   }
 }
 
 
+
+export default Navigation;
