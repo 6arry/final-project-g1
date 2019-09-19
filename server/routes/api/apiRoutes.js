@@ -65,4 +65,12 @@ var User = require("../../models/user");
     });
   });
 
+  //fetching user from DB
+  router.route("/user/:id").get(function(req, res) {
+
+    User.find({ user : req.params.id }).populate("users").exec(function(error, results) {
+        res.send((error) ? error : results);
+   });
+  });
+
 module.exports = router;
