@@ -10,7 +10,7 @@ var User = require("../../models/user");
   router.route("/playlist").post(function(req, res) {
     var plist = new Playlist({
         name : req.body.name,
-        user: req.body.user
+        user: req.session.UID
     });
     plist.save(function(error){
         if(error){
@@ -51,16 +51,16 @@ var User = require("../../models/user");
   router.route("/user").post(function(req, res) {
     var newUser = new User({
       name: req.body.name,
-      email: req.body.email,
       password: req.body.password,
-      register_date: req.body.register_date
-
     });
     newUser.save(function(error){
-      if(error){
+      if(error){ res.json(error);
 
       } else {
-        res.json(newUser);
+        req.session.UID = newUser._id;
+        req.session.UNAME = newUser.name;
+  
+          res.redirect("/");
       };
     });
   });

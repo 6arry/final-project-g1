@@ -26,6 +26,11 @@ function Join() {
                   isVisible={true}> 
                 <div>      
                   <h1 className="hit-the-floor">Sign up Bitch!</h1>
+                  <form method="POST" action="/api/user">
+                    <input name="name" type="text" />
+                    <input name="password" type="text" />
+                        <input type="submit" />
+                    </form>
                 </div>
               </Animated>
             </div>
