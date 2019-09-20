@@ -5,7 +5,7 @@
 
 // // Visit https://simple-youtube.github.io/simple-youtube-api/master/ for documentation
 
-// youtube.searchVideos('Manila Grey', 5)
+// youtube.searchVideos('Manila Grey', 1)
 //     .then(results => {
 //         // console.log(`The video's title is ${results[0].title}`);
 //         // console.log(results);
