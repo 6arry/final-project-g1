@@ -1,17 +1,13 @@
 import React from 'react'
-
+import SearchBar from './SearchBar'
 
 
 function Searchlist () {
-    // var element = document.getElementById("body");
-    // element.className="home";
     return (
-     
-            
-        
-                  <div>
-                    <h1>Searchlist Baby!!!</h1>
-                  </div>
+      <div className="mb-4">
+        <h1>Search</h1>
+        <SearchBar />
+       </div>
             
         
   );

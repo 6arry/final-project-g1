@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import './Join.css';
+import './SignupLogin.css';
 import {Animated} from 'react-animated-css';
 import { Button, Input } from 'reactstrap';
 
