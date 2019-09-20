@@ -7,7 +7,7 @@ import {Animated} from 'react-animated-css';
 function Host() {
 
   return (
-    <div>
+    <div className="page">
         <Animated
           animationIn="rotateInUpRight"  
           animationOut="zoomOutDown" 
@@ -27,7 +27,6 @@ function Host() {
                   isVisible={true}> 
                 <div>      
                   <h1 className="hit-the-floor">Let the Party Begin!</h1>
-                  <audio src="./music/Arpy.mp3" controls autoplay></audio>
                   <div>
                   <Animated
                       animationIn="rotateInUpLeft"  

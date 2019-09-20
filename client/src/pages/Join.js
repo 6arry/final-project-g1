@@ -7,7 +7,7 @@ import {Animated} from 'react-animated-css';
 function Join() {
   
   return (
-    <div>
+    <div className="page">
       <Animated
         animationIn="slideInLeft" 
         animationOut="zoomOutDowçn" 
