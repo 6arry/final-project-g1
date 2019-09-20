@@ -2,7 +2,7 @@ import React from 'react';
 import { Icon, Input } from 'semantic-ui-react';
 
 function SearchBar (props) {
-  console.log(props)
+  // console.log(props)
   return <Input
     value={props.searchTerm}
     onChange={(e) => props.updateSearchTerm(e.target.value)}

@@ -1,3 +1,4 @@
 module.exports = {
-    YTkey: 'AIzaSyAJ5dz4MWjAmoAsak4Hoj6eEmh_g3kLfhs'
+    // YTkey: 'AIzaSyDirXbbDf_Zgd3jkOLJQf0q3WmJ-klfrl4',
+    MMkey: 'ad47d09f2e445f61787b758dff89ec33'
 }
