@@ -1,0 +1,28 @@
+{
+  "name": "final-project-g1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start" : "cd server && node serverEntryPoint.js",
+    "heroku-postbuild": "cd server && npm install && cd ../client && npm install && npm run build"
+  },
+  "dependencies": {
+    "concurrently": "^4.1.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.0",
+    "react-scripts": "^3.1.1",
+    "start": "^5.1.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/g-xander/final-project-g1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/g-xander/final-project-g1/issues"
+  },
+  "homepage": "https://github.com/g-xander/final-project-g1#readme"
+}

@@ -1,4 +1,4 @@
-//mongoose connection
+// place mongoose connection here
 
 const mongoose = require('mongoose')
 
