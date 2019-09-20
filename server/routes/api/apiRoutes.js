@@ -87,15 +87,20 @@ var User = require("../../models/user");
   //front end user's playlist display
   router.route("/userPlaylist").get(function(req, res) {
   
-    var uid = (req.session.UID) ? req.session.UID : "";
+    if (!req.session.UID) { 
+      res.send('{ "user" : "Not Logged In", "data" : []}')
+      return;
+    }
     
-    Playlist.findOne({ user : uid }).exec(function(error, results) {
+    Playlist.findOne({ user : req.session.UID }).exec(function(error, results) {
       if (!error) {
         Song.find({ playlist : results._id })
           .populate('playlist')
           .exec(function(error, results) {
-            console.log(results);
-            res.send((error) ? error : results);
+            var temp = JSON.stringify(results);
+            temp = '{ "user" : "' + req.session.UNAME + '", "data" :' + temp + "}";
+
+            res.send((error) ? error : temp);
         });
       } else res.send("[ ]");
     });

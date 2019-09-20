@@ -5,6 +5,7 @@ import React, { Component } from "react";
 class Sidebar extends Component {
 
   state = {
+    username: "",
     playlist: []
   };
 
@@ -15,7 +16,7 @@ class Sidebar extends Component {
   loadPlaylist = () => {
     API.getPlaylist()
       .then(res =>
-        this.setState({ playlist: res.data })
+        this.setState({ playlist: res.data.data, username: res.data.user })
       )
       .catch(err => console.log(err));
   };
@@ -23,7 +24,7 @@ class Sidebar extends Component {
   render() {
     return(
       <div>
-         <h1>Playlist baby!</h1>
+         <h1> {this.state.username}'s Playlist!</h1>
 
             {this.state.playlist.length ? (
                   <ul>
