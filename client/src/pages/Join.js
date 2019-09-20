@@ -7,7 +7,7 @@ import {Animated} from 'react-animated-css';
 function Join() {
   
   return (
-    <div>
+    <div className="page">
       <Animated
         animationIn="slideInLeft" 
         animationOut="zoomOutDowçn" 
@@ -27,9 +27,17 @@ function Join() {
                 <div>      
                   <h1 className="hit-the-floor">Sign up Bitch!</h1>
                   <form method="POST" action="/api/user">
-                    <input name="name" type="text" />
-                    <input name="password" type="text" />
+                    <input name="name" type="text" placeholder="new user" />
+                    <input name="password" type="text" placeholder="password" />
                         <input type="submit" />
+                    </form>
+                    <br>
+                    </br>
+                    <form method="POST" action="/api/login">
+                      <input name="username" type="text" placeholder="login" />
+                      <input name="password" type="password" placeholder="password" />
+
+                      <input type="submit" />
                     </form>
                 </div>
               </Animated>

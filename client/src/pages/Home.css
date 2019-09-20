@@ -24,7 +24,37 @@
 .text {
     color: white;
 }
-body {
+#body {
     background-color: black;
+}
+.sidebar {
+  float: left;
+  opacity: .90;
+  position: relative;
+  background-color: white;
+  width: 25%;
+  height: auto;
+  color: black;
+  
+
+}
+.searchlist {
+    color: black;
+    background-color: white;
+    float: right;
+    opacity: .90;
+    position: relative;
+    width: 25%;
+    height: auto;
+}
+.youtube{
+  /* background-color: white; */
+  background-image: url("../images/Waiting.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: .80;
+  width: 50%;
+  height: 1000px;
+  display: inline-block;
 }
 

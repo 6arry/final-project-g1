@@ -2,8 +2,8 @@ import axios from "axios";
 
 export default {
   // Gets user's playlist
-  getPlaylist: function(id) {
-    return axios.get("/api/playlist/" + id);
+  getPlaylist: function() {
+    return axios.get("/api/userPlaylist");
   },
   // Saves a playlist to the database
   savePlaylist: function(playlistData) {

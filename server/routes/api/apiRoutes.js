@@ -30,6 +30,7 @@ var User = require("../../models/user");
   });
 
 //Populating playlists with songs
+//Garry, use this route to populate the user playlist on sidebar
   router.route("/song").post(function(req, res) {
       var newSong = new Song({
         name: req.body.name,
@@ -47,7 +48,7 @@ var User = require("../../models/user");
     });
   });
 
-  //user creation for test html
+  //user creation 
   router.route("/user").post(function(req, res) {
     var newUser = new User({
       name: req.body.name,
@@ -59,8 +60,18 @@ var User = require("../../models/user");
       } else {
         req.session.UID = newUser._id;
         req.session.UNAME = newUser.name;
-  
-          res.redirect("/");
+
+        var plist = new Playlist({
+          name : "playlist",
+          user: req.session.UID
+            });
+            plist.save(function(error){
+                if(error){ res.json(error)
+        
+                } else {
+                  res.redirect("/");
+                }
+            })
       };
     });
   });
@@ -71,6 +82,24 @@ var User = require("../../models/user");
     User.find({ user : req.params.id }).populate("users").exec(function(error, results) {
         res.send((error) ? error : results);
    });
+  });
+
+  //front end user's playlist display
+  router.route("/userPlaylist").get(function(req, res) {
+  
+    var uid = (req.session.UID) ? req.session.UID : "";
+    
+    Playlist.findOne({ user : uid }).exec(function(error, results) {
+      if (!error) {
+        Song.find({ playlist : results._id })
+          .populate('playlist')
+          .exec(function(error, results) {
+            console.log(results);
+            res.send((error) ? error : results);
+        });
+      } else res.send("[ ]");
+    });
+    
   });
 
 module.exports = router;
