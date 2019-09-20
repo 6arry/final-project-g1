@@ -4,6 +4,7 @@ import './Home.css';
 import {Animated} from 'react-animated-css';
 import Sidebar from '../components/Sidebar';
 import Searchlist from '../components/Searchlist';
+import SearchBar from '../components/SearchBar';
 
 
 function Home() {
@@ -33,7 +34,7 @@ function Home() {
                         <h1 className="hit-the-floor">DJcollective</h1>
                       </div>
               </Animated>
-              <div className="sidebar">
+                <div>
                       <Animated
                         animationIn="rotateInUpLeft"  
                         animationOut="zoomOutDown" 
@@ -43,31 +44,46 @@ function Home() {
                         isVisible={true}> 
 
 
+              <div className="sidebar">
                                 <Sidebar />
-
+                              </div>
                       </Animated>
                       </div>
-                          <div className="searchlist">
+                      <div>
                           <Animated
-                                animationIn="rotateInUpLeft"  
+                                animationIn="slideInRight"  
                                 animationOut="zoomOutDown" 
                                 animationInDelay={1100}
                                 animationInDuration={1400} 
                                 animationOutDuration={1400} 
                                 isVisible={true}> 
 
+                          <div className="searchlist">
                             <Searchlist />
-
+                            </div>
                             </Animated>
+                          
+
                           </div>
                   </div>
-                  
-            
-                        <div className="youtube">
+                 <div>
+                  <Animated
+                                animationIn="slideInUp"  
+                                animationOut="zoomOutDown" 
+                                animationInDelay={1100}
+                                animationInDuration={1400} 
+                                animationOutDuration={1400} 
+                                isVisible={true}> 
+                                
                         
+                   <div className="youtube">
                         <h1>Youtube stuff</h1>
-                        
+                        <SearchBar />
                         </div>
+
+                      </Animated>
+                    
+                  </div>
           </div>
       </Animated>
       </div>
