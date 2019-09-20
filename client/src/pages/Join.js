@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import './Join.css';
 import {Animated} from 'react-animated-css';
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+
 
 
 function Join() {
@@ -26,19 +28,21 @@ function Join() {
                   isVisible={true}> 
                 <div>      
                   <h1 className="hit-the-floor">Sign up Bitch!</h1>
-                  <form method="POST" action="/api/user">
-                    <input name="name" type="text" placeholder="new user" />
-                    <input name="password" type="text" placeholder="password" />
-                        <input type="submit" />
-                    </form>
-                    <br>
-                    </br>
-                    <form method="POST" action="/api/login">
-                      <input name="username" type="text" placeholder="login" />
-                      <input name="password" type="password" placeholder="password" />
+                        <FormGroup method="POST" action="/api/user">
+                          <input name="name" type="text" placeholder="new user" />
+                          <input name="password" type="text" placeholder="password" />
+                              {/* <input type="submit" /> */}
+                              <Button type="submit" color="primary">Signup</Button>
+                        </FormGroup>
+                          <br>
+                          </br>
+                          <form method="POST" action="/api/login">
+                            <input name="username" type="text" placeholder="login" />
+                            <input name="password" type="password" placeholder="password" />
+                            {/* <input type="submit" /> */}
+                            <Button type="submit">Login</Button>
 
-                      <input type="submit" />
-                    </form>
+                          </form>
                 </div>
               </Animated>
             </div>
