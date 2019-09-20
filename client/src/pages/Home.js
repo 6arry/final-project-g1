@@ -88,9 +88,8 @@ function Home() {
       </Animated>
       </div>
     
-
-  
-  );
+    )
+  }
 }
 
 export default Home;
