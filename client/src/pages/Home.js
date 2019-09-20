@@ -1,87 +1,101 @@
 import React from 'react';
 import './App.css';
-import '../components/Ytsearch';
+import './Home.css';
+import {Animated} from 'react-animated-css';
+import Sidebar from '../components/Sidebar';
+import Searchlist from '../components/Searchlist';
 import SearchBar from '../components/SearchBar';
-import Ytplayer from '../components/Ytplayer';
-import { Animated } from 'react-animated-css';
 
-const YouTube = require('simple-youtube-api');
-const yt_api = require('../config/keys').YTkey;
-const youtube = new YouTube(yt_api);
 
-class Home extends React.Component {
-  state = {
-    ytResults: [],
-    searchTerm: ''
-  };
+function Home() {
+  // var element = document.getElementById("body");
+  // element.className="home";
+  return (
+     <div>
+      <Animated
+        animationIn="rotateInUpLeft" 
+        animationOut="zoomOutDown" 
+        animationInDelay={0}
+        animationInDuration={1400} 
+        animationOutDuration={1400} 
+        isVisible={true}> 
 
-  updateSearchTerm = value => {
-    console.log(value);
-    this.setState({ searchTerm: value });
-  };
+        <div className="home">
+          <div>
+            <Animated 
+                    animationIn="lightSpeedIn" 
+                    animationOut="zoomOutDown" 
+                    animationInDelay={50}
+                    animationInDuration={2200} 
+                    animationOutDuration={1400} 
+                    isVisible={true}> 
+                  
+                      <div>
+                        <h1 className="hit-the-floor">DJcollective</h1>
+                      </div>
+              </Animated>
+                <div>
+                      <Animated
+                        animationIn="rotateInUpLeft"  
+                        animationOut="zoomOutDown" 
+                        animationInDelay={1100}
+                        animationInDuration={1400} 
+                        animationOutDuration={1400} 
+                        isVisible={true}> 
 
-  ytSearch = () => {
-    console.log('searching...');
 
-    youtube
-      .searchVideos(this.state.searchTerm, 5)
-      .then(results => {
-        console.log(`The video's title is ${results[0].title}`);
-        console.log(results);
+              <div className="sidebar">
+                                <Sidebar />
+                              </div>
+                      </Animated>
+                      </div>
+                      <div>
+                          <Animated
+                                animationIn="slideInRight"  
+                                animationOut="zoomOutDown" 
+                                animationInDelay={1100}
+                                animationInDuration={1400} 
+                                animationOutDuration={1400} 
+                                isVisible={true}> 
 
-        //save the ytresults to the state in an array
-        //display in a div container
-        //using a map over the results
+                          <div className="searchlist">
+                            <Searchlist />
+                            </div>
+                            </Animated>
+                          
 
-        // console.log(results[0].title);
-        // console.log(results[0].description);
-        // console.log(results[0].id);
-        // console.log(results[0].thumbnails.default.url);
-      })
-      .catch(console.log);
-  };
+                          </div>
+                  </div>
+                 <div>
+                  <Animated
+                                animationIn="slideInUp"  
+                                animationOut="zoomOutDown" 
+                                animationInDelay={1100}
+                                animationInDuration={1400} 
+                                animationOutDuration={1400} 
+                                isVisible={true}> 
+                                
+                        
+                   <div className="youtube">
+                        <h1>Youtube stuff</h1>
+                        <SearchBar />
+                        </div>
 
-  render(){
-    return (
-      <div>
-        <Animated
-          animationIn="rotateInUpLeft" 
-          animationOut="zoomOutDown" 
-          animationInDelay={0}
-          animationInDuration={1400} 
-          animationOutDuration={1400} 
-          isVisible={true}> 
-
-          <div className="home">
-            <div>
-              <Animated 
-                      animationIn="lightSpeedIn" 
-                      animationOut="zoomOutDown" 
-                      animationInDelay={50}
-                      animationInDuration={2200} 
-                      animationOutDuration={1400} 
-                      isVisible={true}> 
-                    <div>  
-                      <h1 className="hit-the-floor">DJcollective</h1>
-                    </div>
-                    <SearchBar
-                      searchTerm={this.state.searchTerm}
-                      updateSearchTerm={this.updateSearchTerm}
-                      ytSearch={this.ytSearch}
-                    />
-                    <Ytplayer />
-        
-                </Animated>
-              </div>
-            </div>
-        </Animated>
+                      </Animated>
+                    
+                  </div>
+          </div>
+      </Animated>
       </div>
-
     
     )
   }
 }
 
 export default Home;
+      
+                  
+      
+                        
   
     

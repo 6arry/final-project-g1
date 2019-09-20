@@ -3,11 +3,9 @@ const Schema = mongoose.Schema
 
 const playlist = new Schema(
     {
-
-        //user will need to be adjust to how users are coming in
-
         name: { type: String, required: true },
-        user: { type: [String], required: true },
+        user: { type: mongoose.Schema.Types.ObjectId,
+            ref:'user' },
     },
     { timestamps: true },
 )
