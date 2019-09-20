@@ -1,0 +1,42 @@
+
+<!-- making sure route is operational  -->
+
+<html>
+
+    <form method="POST" action="http://127.0.0.1:3000/api/user">
+        <input name="name" type="text" />
+        <input name="password" type="text" />
+
+        <input type="submit" />
+    </form>
+
+    <!-- user login -->
+
+    <form method="POST" action="http://127.0.0.1:3000/api/login">
+        <input name="username" type="text" />
+        <input name="password" type="text" />
+
+        <input type="submit" />
+    </form>
+
+    <form method="POST" action="http://127.0.0.1:3000/api/playlist">
+        <input name="name" type="text" />
+        <input name="user" type="text" />
+
+        <input type="submit" />
+    </form>
+
+<!-- testing song route -->
+
+    <form method="POST" action="http://127.0.0.1:3000/api/song">
+        <input name="name" type="text" />
+        <input name="artist" type="text" />
+        <input name="URL" type="text" />
+        <input name="playlist" type="text" />
+
+        <input type="submit" />
+    </form>
+
+    
+
+</html>
