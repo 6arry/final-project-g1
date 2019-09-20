@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import './Join.css';
 import {Animated} from 'react-animated-css';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Input } from 'reactstrap';
 
 
 
@@ -28,12 +28,12 @@ function Join() {
                   isVisible={true}> 
                 <div>      
                   <h1 className="hit-the-floor">Sign up Bitch!</h1>
-                        <FormGroup method="POST" action="/api/user">
-                          <input name="name" type="text" placeholder="new user" />
-                          <input name="password" type="text" placeholder="password" />
+                        <form method="POST" action="/api/user">
+                          <Input name="name" type="text" placeholder="new user" />
+                          <Input name="password" type="text" placeholder="password" />
                               {/* <input type="submit" /> */}
                               <Button type="submit" color="primary">Signup</Button>
-                        </FormGroup>
+                        </form>
                           <br>
                           </br>
                           <form method="POST" action="/api/login">

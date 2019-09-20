@@ -12,6 +12,8 @@
 
 // module.exports = db
 
+
+//mongoose connection
 const mongoose = require('mongoose')
 
 mongoose
