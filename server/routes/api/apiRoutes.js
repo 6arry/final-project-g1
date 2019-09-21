@@ -41,6 +41,7 @@ var User = require("../../models/user");
     Playlist.findOne({ user : req.session.UID }).exec(function(error, results) {
       if (!error) {
 
+        //find playlist based off of Unique playlist ID
             var newSong = new Song({
               name: req.body.name,
               artist: req.body.artist,
