@@ -12,7 +12,7 @@ function Join() {
     <div className="page">
       <Animated
         animationIn="slideInLeft" 
-        animationOut="zoomOutDowçn" 
+        animationOut="zoomOutDown" 
         animationInDelay={0}
         animationInDuration={1400} 
         animationOutDuration={1400} 
