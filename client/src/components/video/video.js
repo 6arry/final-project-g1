@@ -6,15 +6,15 @@ const Video = (props) => {
     const { video, thumbnail } = props;
     return (
         <div className='col'>
-            <div className='card mb-4 shadow-sm'>
+            <div className='card mb-2 shadow-sm'>
                 <div className='card-body'>
-                    <h5 className='card-text'>{video}</h5>
-                    <img src={thumbnail} className='mb-4' />
+                    <h5 className='text-center card-text'>{video}</h5>
+                    <center><img className='mb-2' src={thumbnail} /></center>
                     <Button to='#' className='btn btn-block btn-dark'>
-                    <i class="fas fa-plus-square"> Add Song</i>
+                    <i className="fas fa-plus-square"> Add Song</i>
                     </Button>
                     <Button to='#' className='btn btn-block btn-success'>
-                    <i class="fas fa-caret-square-right"> Play Song</i>
+                    <i className="fas fa-caret-square-right"> Play Song</i>
                     </Button>
                 </div>
             </div>

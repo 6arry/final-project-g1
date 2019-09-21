@@ -4,10 +4,7 @@ import './SignupLogin.css';
 import {Animated} from 'react-animated-css';
 import { Button, Input } from 'reactstrap';
 
-
-
-function Join() {
-  
+function SignupLogin() {
   return (
     <div className="page">
       <Animated animationIn="slideInLeft" animationOut="zoomOutDowçn" animationInDelay={0} animationInDuration={1400} animationOutDuration={1400} isVisible={true}>
@@ -38,4 +35,4 @@ function Join() {
      
 }
 
-export default Join;
+export default SignupLogin;

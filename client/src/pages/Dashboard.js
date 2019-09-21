@@ -5,7 +5,7 @@ import { Animated } from 'react-animated-css';
 import Sidebar from '../components/Sidebar';
 import Searchlist from '../components/Searchlist';
 import Ytplayer from '../components/Ytplayer';
-
+import SearchBar from '../components/SearchBar'
 
 function Home() {
   return (
@@ -23,16 +23,16 @@ function Home() {
             <Sidebar />
           </div>
         </Animated>
-                    
+                  
         <Animated animationIn="slideInRight" animationOut="zoomOutDown" animationInDelay={1100} animationInDuration={1400} animationOutDuration={1400} isVisible={true}> 
           <div className="searchlist">
-            <Searchlist />
+              <Searchlist />
           </div>
         </Animated>
         
         <Animated animationIn="slideInUp" animationOut="zoomOutDown" animationInDelay={1100} animationInDuration={1400} animationOutDuration={1400} isVisible={true}>
           <div className="youtube">
-              <h1>YouTube Concert</h1>
+              <SearchBar />
               <Ytplayer />
           </div>
         </Animated>

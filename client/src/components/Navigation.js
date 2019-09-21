@@ -15,9 +15,9 @@ export default class Navigation extends React.Component {
     return (
       <Segment inverted>
         <Menu inverted pointing secondary>
-          <Menu.Item as={Link} to='/' name='dashboard' active={activeItem === 'home'} onClick={this.handleItemClick} />
-          {/* <Menu.Item as={Link} to='/host' name='host' active={activeItem === 'host'} onClick={this.handleItemClick} /> */}
-          <Menu.Item as={Link} to='/join' name='login' active={activeItem === 'login'} onClick={this.handleItemClick} />
+          <Menu.Item as={Link} to='/' name='login' active={activeItem === 'login'} onClick={this.handleItemClick} />
+          {/* <Menu.Item as={Link} o='/host' name='host' active={activeItem === 'host'} onClick={this.handleItemClick} /> */}
+          <Menu.Item as={Link} to='/dashboard' name='dashboard' active={activeItem === 'dashboard'} onClick={this.handleItemClick} />
           {/* <Menu.Item as={Link} to='/logout' name='logout' active={activeItem === 'logout'} onClick={this.handleItemClick} /> */}
         </Menu>
       </Segment>
