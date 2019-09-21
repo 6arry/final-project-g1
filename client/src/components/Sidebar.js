@@ -24,24 +24,27 @@ class Sidebar extends Component {
   render() {
     return(
       <div>
-         <h1> {this.state.username}'s Playlist!</h1>
+        <div>
+          <h1> {this.state.username}'s Playlist!</h1>
 
-            {this.state.playlist.length ? (
-                  <ul>
-                    {this.state.playlist.map(song => (
-                      <li>
+              {this.state.playlist.length ? (
+                    <ul>
+                      {this.state.playlist.map(song => (
+                        <li>
+                          
+                            <strong>
+                              {song.name} by {song.artist}
+                            </strong>
                         
-                          <strong>
-                            {song.name} by {song.artist}
-                          </strong>
-                      
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <h3>No Results to Display</h3>
-                )}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <h3>No Results to Display</h3>
+                  )}
 
+        </div>
+          
       </div>
     );
   };

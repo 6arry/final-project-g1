@@ -32,20 +32,33 @@ var User = require("../../models/user");
 //Populating playlists with songs
 //Garry, use this route to populate the user playlist on sidebar
   router.route("/song").post(function(req, res) {
-      var newSong = new Song({
-        name: req.body.name,
-        artist: req.body.artist,
-        URL: req.body.URL,
-        playlist: req.body.playlist
+      
+    if (!req.session.UID) { 
+      res.send( "No songs available")
+      return;
+    }
 
-      });
-      newSong.save(function(error){
-        if(error){
+    Playlist.findOne({ user : req.session.UID }).exec(function(error, results) {
+      if (!error) {
 
-        } else {
-            res.json(newSong);
-        };
+            var newSong = new Song({
+              name: req.body.name,
+              artist: req.body.artist,
+              URL: req.body.URL,
+              playlist: results._id
+      
+            });
+            newSong.save(function(error){
+              if(error){
+      
+              } else {
+                  res.redirect("/");
+              };
+          });
+        
+      } else res.send("Can't find user's playlist, sorry. Something is really wrong.");
     });
+
   });
 
   //user creation 

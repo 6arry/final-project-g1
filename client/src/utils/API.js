@@ -8,6 +8,10 @@ export default {
   // Saves a playlist to the database
   savePlaylist: function(playlistData) {
     return axios.post("/api/playlist", playlistData);
+  },
+  //entersong to database for active user's playlist
+  postSong: function(songData) {
+    return axios.post("/api/song", songData);
   }
 };
 
