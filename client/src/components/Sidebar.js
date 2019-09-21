@@ -3,7 +3,6 @@ import React, { Component } from "react";
 
 
 class Sidebar extends Component {
-
   state = {
     username: "",
     playlist: []
@@ -24,43 +23,27 @@ class Sidebar extends Component {
   render() {
     return(
       <div>
-         <h1> {this.state.username}'s Playlist!</h1>
-
-            {this.state.playlist.length ? (
-                  <ul>
-                    {this.state.playlist.map(song => (
-                      <li>
-                        
-                          <strong>
-                            {song.name} by {song.artist}
-                          </strong>
-                      
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <h3>No Results to Display</h3>
-                )}
+        <p className="h6 text-center">{this.state.username}</p>
+        <p className="h6 text-center">Your Playlist</p>
+          {this.state.playlist.length ? (
+            <ul>
+              {this.state.playlist.map(song => (
+                <li>    
+                  <strong>
+                    {song.name} by {song.artist}
+                  </strong>
+                </li>
+              ))}
+            </ul>
+          ) : (
+        <p className="h4 text-center">Nothing added...</p>
+          )}
 
       </div>
     );
   };
 };
 
-// function Sidebar () {
-//     // var element = document.getElementById("body");
-//     // element.className="home";
-//     return (
-     
-            
-        
-//                   <div>
-//                     <h1>Sidebar baby!</h1>
-//                   </div>
-            
-        
-//   );
-// }
 export default Sidebar;
        
   

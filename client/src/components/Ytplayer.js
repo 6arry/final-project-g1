@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import YouTube from 'react-youtube';
 
-export default class Ytplayer extends React.Component {
+class Ytplayer extends Component {
   render() {
     let pickVid = 'dWhyFfsb74g';
     const opts = {
-      height: '390',
-      width: '640',
+      height: 450,
+      width: '100%',
       playerVars: {
         // https://developers.google.com/youtube/player_parameters
         autoplay: 1
@@ -21,3 +21,5 @@ export default class Ytplayer extends React.Component {
     event.target.pauseVideo();
   }
 }
+
+export default Ytplayer;
