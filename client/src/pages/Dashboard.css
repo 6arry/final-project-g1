@@ -32,7 +32,7 @@
   float: left;
   opacity: 0.9;
   position: relative;
-  background-color: white;
+  background-color: rgba(113, 174, 192, 0.534);
   width: 25%;
   height: auto;
   color: black;
@@ -64,6 +64,6 @@
   background-position: center;
   /* opacity: 0.8; */
   width: 50%;
-  height: 75vh;
+  height: 100vh;
   display: inline-block;
 }

@@ -22,7 +22,7 @@ const Context = React.createContext();
 export class Provider extends Component {
     state = {
         video_list:[],
-        heading: 'Smiling and Dance',
+        heading: 'Top Songs',
         // disptach: action => this.setState (state => reducer(state, action))
     };
 
