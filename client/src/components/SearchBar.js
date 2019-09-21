@@ -39,7 +39,7 @@ class SearchBar extends Component {
     return (
       <Consumer>
         {value => {
-          console.log(value);
+          // console.log(value);
           // const { dispatch } = value;
           return (
             <div className="card card-body mb-4 p-4 search-bar">
