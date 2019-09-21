@@ -18,7 +18,11 @@ class Searchlist extends Component {
                               <h3 className="text-center mb-4">{heading}</h3>
                               <div className="row">
                                   {video_list.map(video => (
-                                      <Video key={video.id} video={video.title} thumbnail={video.thumbnails.default.url}/>
+                                      <Video 
+                                        key={video.id} 
+                                        video={video.title} 
+                                        thumbnail={video.thumbnails.default.url}
+                                        />
                                   ))}
                               </div>
                           </React.Fragment>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from './components/Navigation';
-import Home from './pages/Dashboard';
+import Dashboard from './pages/Dashboard';
 // import Host from './pages/Host';
 import SignupLogin from './pages/SignupLogin';
 // import Logout from './pages/Logout';
@@ -14,9 +14,9 @@ function App() {
         <div className='App'>
           <Navigation />
             <Switch>
-              <Route path='/' exact component={Home} />
+              <Route path='/' exact component={SignupLogin} />
               {/* <Route path='/host' component={Host} /> */}
-              <Route path='/SignupLogin' component={SignupLogin} />
+              <Route path='/dashboard' component={Dashboard} />
               {/* <Route path='/logout' component={Logout} /> */}
             </Switch>
         </div>

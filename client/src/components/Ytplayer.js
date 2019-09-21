@@ -5,7 +5,7 @@ class Ytplayer extends Component {
   render() {
     let pickVid = 'dWhyFfsb74g';
     const opts = {
-      height: '100%',
+      height: 450,
       width: '100%',
       playerVars: {
         // https://developers.google.com/youtube/player_parameters
