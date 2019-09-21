@@ -1,30 +1,30 @@
-import React from 'react';
-import { Icon, Input } from 'semantic-ui-react';
-import YouTube from 'simple-youtube-api';
+import React, { Component } from 'react';
+// import YouTube from 'simple-youtube-api';
+import { Consumer } from '../context'
 
-const yt_api = require('../config/keys').YTkey;
-const youtube = new YouTube(yt_api);
+// const yt_api = require('./config/keys').YTkey;
+// const youtube = new YouTube(yt_api);
 
-function SearchBar (props) {
-// Visit https://simple-youtube.github.io/simple-youtube-api/master/ for documentation
+class SearchBar extends Component {
+  state = {
+    searchTerm: ''
+  }
+  render () {
+    return (
+      <Consumer>
+        {value => {
+          return (
+            <div className="card card-body mb-4 p-4">
+              <h1 className="display-4 text-center">
+                <i className="fas fa-music">Search For A Song</i>
+              </h1>
+            </div>
+          )
+        }}
+      </Consumer>
+    )
 
-youtube.searchVideos('Manila Grey', 1)
-    .then(results => {
-        console.log(`The video's title is ${results[0].title}`);
-        console.log(results);
-        // console.log(results[0].title);
-        // console.log(results[0].description);
-        // console.log(results[0].id);
-        // console.log(results[0].thumbnails.default.url);
-    })
-    .catch(console.log);
-
-  return <Input
-    value={props.searchTerm}
-    onChange={(e) => props.updateSearchTerm(e.target.value)}
-    icon={<Icon name='search' inverted circular link onClick={props.ytSearch}/>}
-    placeholder='Search...'
-  />
+  }
 }
 
 export default SearchBar;
