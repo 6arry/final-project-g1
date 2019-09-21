@@ -5,20 +5,23 @@ import Home from './pages/Dashboard';
 import SignupLogin from './pages/SignupLogin';
 // import Logout from './pages/Logout';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Provider } from '../src/context'
 
 function App() {
   return (
-    <Router>
-      <div className='App'>
-        <Navigation />
-        <Switch>
-          <Route path='/' exact component={Home} />
-          {/* <Route path='/host' component={Host} /> */}
-          <Route path='/SignupLogin' component={SignupLogin} />
-          {/* <Route path='/logout' component={Logout} /> */}
-        </Switch>
-      </div>
-    </Router>
+    <Provider>
+      <Router>
+        <div className='App'>
+          <Navigation />
+            <Switch>
+              <Route path='/' exact component={Home} />
+              {/* <Route path='/host' component={Host} /> */}
+              <Route path='/SignupLogin' component={SignupLogin} />
+              {/* <Route path='/logout' component={Logout} /> */}
+            </Switch>
+        </div>
+      </Router>
+    </Provider>
   );
 }
 
